@@ -7,13 +7,13 @@ A Claude Code skill providing the latest OWASP security best practices (2025-202
 Add this skill to any project with a single command:
 
 ```bash
-curl -sL https://raw.githubusercontent.com/agamm/claude-code-owasp/main/.claude/skills/owasp-security/SKILL.md -o .claude/skills/owasp-security/SKILL.md --create-dirs
+curl -sL https://raw.githubusercontent.com/alraisi/claude-code-owasp/main/.claude/skills/owasp-security/SKILL.md -o .claude/skills/owasp-security/SKILL.md --create-dirs
 ```
 
 Or install globally for all projects:
 
 ```bash
-curl -sL https://raw.githubusercontent.com/agamm/claude-code-owasp/main/.claude/skills/owasp-security/SKILL.md -o ~/.claude/skills/owasp-security/SKILL.md --create-dirs
+curl -sL https://raw.githubusercontent.com/alraisi/claude-code-owasp/main/.claude/skills/owasp-security/SKILL.md -o ~/.claude/skills/owasp-security/SKILL.md --create-dirs
 ```
 
 ## What's Included
@@ -104,7 +104,7 @@ Security quirks including:
 
 ### Clone Full Repository
 ```bash
-git clone https://github.com/agamm/claude-code-owasp.git
+git clone https://github.com/alraisi/claude-code-owasp.git
 cp -r claude-code-owasp/.claude/skills/owasp-security YOUR_PROJECT/.claude/skills/
 ```
 
