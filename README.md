@@ -1,19 +1,19 @@
 # OWASP Security Skill for Claude Code
 
-A Claude Code skill providing the latest OWASP security best practices (2025-2026) for developers building secure applications.
+A Claude Code skill providing the latest OWASP security best practices (2025-2026) for developers building secure web applications, LLM-powered systems, and AI/data-centric applications.
 
 ## Quick Install (One Line)
 
 Add this skill to any project with a single command:
 
 ```bash
-curl -sL https://raw.githubusercontent.com/agam/claude-code-owasp/main/.claude/skills/owasp-security/SKILL.md -o .claude/skills/owasp-security/SKILL.md --create-dirs
+curl -sL https://raw.githubusercontent.com/agamm/claude-code-owasp/main/.claude/skills/owasp-security/SKILL.md -o .claude/skills/owasp-security/SKILL.md --create-dirs
 ```
 
 Or install globally for all projects:
 
 ```bash
-curl -sL https://raw.githubusercontent.com/agam/claude-code-owasp/main/.claude/skills/owasp-security/SKILL.md -o ~/.claude/skills/owasp-security/SKILL.md --create-dirs
+curl -sL https://raw.githubusercontent.com/agamm/claude-code-owasp/main/.claude/skills/owasp-security/SKILL.md -o ~/.claude/skills/owasp-security/SKILL.md --create-dirs
 ```
 
 ## What's Included
@@ -21,12 +21,22 @@ curl -sL https://raw.githubusercontent.com/agam/claude-code-owasp/main/.claude/s
 ### Claude Code Skill
 Location: `.claude/skills/owasp-security/SKILL.md`
 
-- **OWASP Top 10:2025** quick reference table
+- **OWASP Top 10:2025** quick reference table for web applications
+- **OWASP Top 10 for LLM Applications 2025** — LLM01–LLM10 with root causes, code patterns (prompt injection labeling, output sanitization, RAG access control, rate limiting), and a full review checklist
+- **OWASP AI Exchange** — the global consensus framework for all AI systems:
+  - G.U.A.R.D. governance model (Govern, Understand, Adapt, Reduce, Demonstrate)
+  - Threat taxonomy: Input threats, Development-time threats, Runtime threats
+  - Control reference (`#HASHTAG` controls aligned with ISO/IEC 27090/27091 and EU AI Act)
+  - Seven layers of prompt injection protection
+  - Implementation details for key controls (I/O handling, sensitive output filtering, model watermarking)
+  - AI security testing framework and red-teaming tools table
+  - AI privacy principles and legislation tracker
+  - AI Exchange review checklist
+- **OWASP Agentic AI Security (2026)** — ASI01–ASI10 risks for AI agent systems
+- **ASVS 5.0** key requirements by verification level (L1/L2/L3)
 - **Security code review checklists** for input handling, auth, access control, data protection, and error handling
 - **Secure code patterns** with unsafe/safe examples
-- **OWASP Agentic AI Security (2026)** - ASI01-ASI10 risks for AI agent systems
-- **ASVS 5.0** key requirements by verification level
-- **Language-specific security quirks** for 20+ languages with deep analysis guidance
+- **Language-specific security quirks** for 10+ languages with deep analysis guidance
 
 ### Research Report
 Location: `OWASP-2025-2026-Report.md`
@@ -41,7 +51,11 @@ Once installed, Claude Code automatically activates this skill when you:
 - Handle user input or external data
 - Work with cryptography or password storage
 - Design API endpoints
-- Build AI agent systems
+- **Build or review any LLM-powered application**
+- **Work with AI agents, RAG pipelines, or model integrations**
+- **Evaluate third-party models or ML dependencies**
+- **Design or audit any AI system**
+- **Perform AI security testing or red-teaming**
 
 ### Example Prompts
 ```
@@ -50,6 +64,9 @@ Once installed, Claude Code automatically activates this skill when you:
 "What are the security risks in this Python code?"
 "Help me implement secure session management"
 "Check this AI agent for OWASP agentic risks"
+"Review this RAG pipeline for LLM security issues"
+"What controls should I apply to my LLM application?"
+"Help me red-team this AI system using the OWASP AI Exchange framework"
 ```
 
 ## Covered Standards
@@ -57,21 +74,31 @@ Once installed, Claude Code automatically activates this skill when you:
 | Standard | Version | Focus |
 |----------|---------|-------|
 | OWASP Top 10 | 2025 | Web application vulnerabilities |
+| OWASP Top 10 for LLM Applications | 2025 | LLM-specific vulnerabilities (prompt injection, sensitive disclosure, supply chain, excessive agency, etc.) |
+| OWASP AI Exchange | Latest | Comprehensive AI threat & control framework for all AI types; feeds ISO/IEC 27090/27091 and EU AI Act |
 | OWASP ASVS | 5.0.0 | Security verification requirements |
-| OWASP Agentic | 2026 | AI agent security risks |
+| OWASP Agentic AI | 2026 | AI agent security risks (ASI01–ASI10) |
+
+## AI Security Coverage
+
+The skill now provides end-to-end coverage for AI/LLM systems:
+
+| Layer | Standard | What It Covers |
+|-------|----------|----------------|
+| LLM application vulnerabilities | OWASP LLM Top 10:2025 | Prompt injection, data disclosure, supply chain, excessive agency, output handling, RAG weaknesses, misinformation, unbounded consumption |
+| All AI system types | OWASP AI Exchange | Governance, input threats, development-time threats, runtime threats, privacy, red-teaming, regulatory compliance |
+| AI agent systems | OWASP Agentic AI 2026 | Goal hijacking, tool misuse, privilege abuse, cascading failures, rogue agents |
 
 ## Language Coverage
 
-Security quirks for 20+ languages including:
+Security quirks including:
 
-| Web | Systems | Mobile | Scripting |
-|-----|---------|--------|-----------|
-| JavaScript/TypeScript | C/C++ | Swift | Python |
-| PHP | Rust | Kotlin | Ruby |
-| Java | Go | Dart | Perl |
-| C# | | | Shell |
-
-Each language section includes common vulnerabilities, unsafe/safe code patterns, and key functions to watch for.
+| Web | Systems | Scripting | Data |
+|-----|---------|-----------|------|
+| JavaScript/TypeScript | C/C++ | Python | SQL |
+| PHP | Rust | Ruby | Shell |
+| Java | Go | | |
+| C# | | | |
 
 ## Alternative Installation
 
@@ -91,6 +118,8 @@ Contributions welcome! Please:
 ## Sources
 
 - [OWASP Top 10:2025](https://owasp.org/Top10/)
+- [OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/)
+- [OWASP AI Exchange](https://owaspai.org/)
 - [OWASP ASVS 5.0](https://owasp.org/www-project-application-security-verification-standard/)
 - [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/)
 - [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/)
@@ -101,4 +130,4 @@ MIT License - See LICENSE file for details.
 
 ---
 
-**Keywords:** OWASP, security, Claude Code, AI security, application security, ASVS, secure coding, vulnerability, injection, XSS, CSRF, authentication, authorization
+**Keywords:** OWASP, security, Claude Code, AI security, LLM security, application security, ASVS, secure coding, vulnerability, injection, XSS, CSRF, authentication, authorization, prompt injection, RAG security, AI Exchange, agentic AI, LLM Top 10
