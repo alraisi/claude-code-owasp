@@ -1,6 +1,6 @@
 # OWASP Security Skill for Claude Code
 
-A Claude Code skill providing the latest OWASP security best practices (2025-2026) for developers building secure web applications, LLM-powered systems, and AI/data-centric applications.
+A Claude Code skill providing the latest OWASP security best practices (2025-2026) for developers building secure web applications, LLM-powered systems, AI/data-centric applications, and mobile apps.
 
 ## Quick Install (One Line)
 
@@ -36,7 +36,17 @@ Location: `.claude/skills/owasp-security/SKILL.md`
 - **ASVS 5.0** key requirements by verification level (L1/L2/L3)
 - **Security code review checklists** for input handling, auth, access control, data protection, and error handling
 - **Secure code patterns** with unsafe/safe examples
-- **Language-specific security quirks** for 10+ languages with deep analysis guidance
+- **OWASP MAS: MASVS v2.1.0 + MASTG v1.7.0** — complete mobile application security standard:
+  - All 8 control groups: STORAGE, CRYPTO, AUTH, NETWORK, PLATFORM, CODE, RESILIENCE, PRIVACY
+  - Android (Kotlin) and iOS (Swift) secure code patterns for every group
+  - Forbidden crypto algorithm table, Android Keystore / iOS Secure Enclave patterns
+  - Certificate pinning (OkHttp + iOS URLSession), TLS enforcement
+  - WebView hardening, IPC security, FLAG_SECURE UI protection
+  - MASTG testing methodology: APK extraction, jadx/apktool, Frida/Objection scripts
+  - Binary protection checks (PIE, stack canaries, R8/ProGuard)
+  - Root/jailbreak detection, anti-tampering, obfuscation techniques
+  - Full mobile security review checklist
+- **Language-specific security quirks** for 20+ languages with deep analysis guidance
 
 ### Research Report
 Location: `OWASP-2025-2026-Report.md`
@@ -51,6 +61,7 @@ Once installed, Claude Code automatically activates this skill when you:
 - Handle user input or external data
 - Work with cryptography or password storage
 - Design API endpoints
+- **Build, review, or test any mobile application (Android/iOS/cross-platform)**
 - **Build or review any LLM-powered application**
 - **Work with AI agents, RAG pipelines, or model integrations**
 - **Evaluate third-party models or ML dependencies**
@@ -78,6 +89,8 @@ Once installed, Claude Code automatically activates this skill when you:
 | OWASP AI Exchange | Latest | Comprehensive AI threat & control framework for all AI types; feeds ISO/IEC 27090/27091 and EU AI Act |
 | OWASP ASVS | 5.0.0 | Security verification requirements |
 | OWASP Agentic AI | 2026 | AI agent security risks (ASI01–ASI10) |
+| OWASP MASVS | 2.1.0 | Mobile application security verification standard (Android & iOS) |
+| OWASP MASTG | 1.7.0 | Mobile application security testing guide |
 
 ## AI Security Coverage
 
@@ -88,15 +101,16 @@ The skill now provides end-to-end coverage for AI/LLM systems:
 | LLM application vulnerabilities | OWASP LLM Top 10:2025 | Prompt injection, data disclosure, supply chain, excessive agency, output handling, RAG weaknesses, misinformation, unbounded consumption |
 | All AI system types | OWASP AI Exchange | Governance, input threats, development-time threats, runtime threats, privacy, red-teaming, regulatory compliance |
 | AI agent systems | OWASP Agentic AI 2026 | Goal hijacking, tool misuse, privilege abuse, cascading failures, rogue agents |
+| Mobile applications (Android & iOS) | OWASP MASVS v2.1.0 + MASTG v1.7.0 | Storage, crypto, auth, network, platform interaction, code quality, resilience, privacy |
 
 ## Language Coverage
 
 Security quirks including:
 
-| Web | Systems | Scripting | Data |
-|-----|---------|-----------|------|
-| JavaScript/TypeScript | C/C++ | Python | SQL |
-| PHP | Rust | Ruby | Shell |
+| Web | Systems | Scripting | Data | Mobile |
+|-----|---------|-----------|------|--------|
+| JavaScript/TypeScript | C/C++ | Python | SQL | Android (Kotlin) |
+| PHP | Rust | Ruby | Shell | iOS (Swift) |
 | Java | Go | | |
 | C# | | | |
 
@@ -123,6 +137,8 @@ Contributions welcome! Please:
 - [OWASP ASVS 5.0](https://owasp.org/www-project-application-security-verification-standard/)
 - [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/)
 - [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/)
+- [OWASP MASVS v2.1.0](https://mas.owasp.org/MASVS/)
+- [OWASP MASTG v1.7.0](https://mas.owasp.org/MASTG/)
 
 ## License
 
@@ -130,4 +146,4 @@ MIT License - See LICENSE file for details.
 
 ---
 
-**Keywords:** OWASP, security, Claude Code, AI security, LLM security, application security, ASVS, secure coding, vulnerability, injection, XSS, CSRF, authentication, authorization, prompt injection, RAG security, AI Exchange, agentic AI, LLM Top 10
+**Keywords:** OWASP, security, Claude Code, AI security, LLM security, mobile security, application security, ASVS, MASVS, MASTG, Android security, iOS security, secure coding, vulnerability, injection, XSS, CSRF, authentication, authorization, prompt injection, RAG security, AI Exchange, agentic AI, LLM Top 10, certificate pinning, reverse engineering
