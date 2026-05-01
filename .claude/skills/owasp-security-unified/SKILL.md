@@ -1,6 +1,6 @@
 ---
-name: owasp-security
-description: Use when reviewing code for security vulnerabilities, implementing authentication/authorization, handling user input, or discussing web application security. Covers OWASP Top 10:2025, ASVS 5.0, Agentic AI security (2026), OWASP Top 10 for LLM Applications 2025, OWASP AI Exchange comprehensive AI threat & control framework, and OWASP MAS (MASVS v2.1.0 + MASTG v1.7.0) mobile application security standards.
+name: owasp-security-unified
+description: Comprehensive single-file OWASP security skill — covers Top 10:2025, ASVS 5.0, Agentic AI 2026, LLM Top 10 2025, AI Exchange, MASVS v2.1.0 + MASTG v1.7.0, and language-specific patterns. Use when you want all OWASP coverage in one skill. For lower token usage, prefer the focused skills (owasp-web-security, owasp-llm-security, owasp-ai-exchange, owasp-mobile-security, owasp-language-quirks).
 ---
 
 # OWASP Security Best Practices Skill
