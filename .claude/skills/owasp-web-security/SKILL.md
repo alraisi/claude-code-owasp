@@ -214,4 +214,4 @@ When building or reviewing AI agent systems, check for:
 - Handling errors and exceptions
 - Working with third-party dependencies
 
-For language-specific security quirks, use the **owasp-language-quirks** skill alongside this one.
+For language-specific security quirks, use the **owasp-language-quirks** skill alongside this one. When the work involves REST, GraphQL, or any HTTP API (endpoint authorization, object/property-level access control, rate limiting, SSRF, third-party API consumption), also use the **owasp-api-security** skill — APIs have a distinct attack surface from traditional web pages.
